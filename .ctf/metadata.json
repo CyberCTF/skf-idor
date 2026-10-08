@@ -1,0 +1,14 @@
+{
+  "title": "OWASP SKF Insecure Direct Object References",
+  "description": "A Flask application that creates PDF documents and serves them by numeric id. Any id can be requested; one of the pre-generated documents is the secret one.",
+  "question": "Enumerate the document ids to download a PDF that is not yours and find the secret document (insecure direct object reference).",
+  "category": "WEB",
+  "difficulty": 1,
+  "evidence_kind": "SECRET",
+  "capabilities": [
+    "idor",
+    "access-control",
+    "enumeration",
+    "authorization"
+  ]
+}
