@@ -4,11 +4,5 @@
   "question": "Enumerate the document ids to download a PDF that is not yours and find the secret document (insecure direct object reference).",
   "category": "WEB",
   "difficulty": 1,
-  "evidence_kind": "SECRET",
-  "capabilities": [
-    "idor",
-    "access-control",
-    "enumeration",
-    "authorization"
-  ]
+  "evidence_kind": "SECRET"
 }
