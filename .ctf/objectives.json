@@ -1,0 +1,42 @@
+{
+  "objectives": [
+    {
+      "key": "main",
+      "title": "Read the flag",
+      "prompt": "Download a document that is not yours and retrieve the flag (/ctf/flag).",
+      "check": {
+        "evidence": "SECRET",
+        "format": "FLAG{%s}"
+      },
+      "dev": "FLAG{dev-skf-idor}",
+      "hints": [
+        "Documents are served by a numeric id, and any id is accepted.",
+        "Read about insecure direct object references."
+      ],
+      "steps": [
+        {
+          "key": "param",
+          "title": "Find the input",
+          "prompt": "Which form field selects the document to download? (field name)",
+          "check": {
+            "answer": [
+              "pdf_id"
+            ]
+          }
+        },
+        {
+          "key": "class",
+          "title": "Name the weakness",
+          "prompt": "What class of vulnerability is this? (acronym accepted)",
+          "check": {
+            "answer": [
+              "idor",
+              "insecure direct object reference",
+              "insecure direct object references"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
